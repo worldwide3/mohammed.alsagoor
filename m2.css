@@ -1,0 +1,223 @@
+/* الخط العام */
+body {
+  font-family: 'Cairo', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* الحاويات */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* الهيدر */
+header {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00d1b2;
+}
+
+/* زر القائمة للجوال */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+      flex-direction: column;
+      background-color: #1e1e2f;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      display: none;
+  }
+
+  nav ul.show {
+      display: flex;
+  }
+
+  .menu-toggle {
+      display: block;
+  }
+}
+
+/* قسم البطل */
+.hero {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 4px solid #00d1b2;
+  object-fit: cover;
+  box-shadow: none; /* إزالة الظل */
+}
+
+/* الأقسام */
+.section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #1e1e2f;
+}
+
+.section-img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* الكروت */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #00d1b2;
+}
+
+.card p {
+  font-size: 16px;
+  color: #444;
+}
+
+/* الشهادات */
+.certifications-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #1e1e2f;
+}
+
+.certificates-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.certificate-card {
+  width: 200px;
+  text-align: center;
+}
+
+.certificate-card img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 10px;
+}
+
+/* التواصل */
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #1e1e2f;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.contact-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* الفوتر */
+footer {
+  background-color: #1e1e2f;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+/* عندما يكون الزر نشط */
+#menu-toggle.active {
+  transform: rotate(180deg); /* على سبيل المثال: تغيير اتجاه السهم */
+  transition: transform 0.3s ease;
+}
