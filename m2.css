@@ -7,6 +7,38 @@ body {
   color: #333;
 }
 
+/* شريط متحرك في الزاوية العلوية اليمنى */
+.marquee-container {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: white;
+  color: #020c1b;
+  padding: 8px 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 999;
+  max-width: 300px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: bold;
+}
+
+.marquee-text {
+  display: inline-block;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 /* الحاويات */
 .container {
   width: 90%;
@@ -97,7 +129,7 @@ nav ul li a:hover {
   margin-bottom: 20px;
   border: 4px solid #00d1b2;
   object-fit: cover;
-  box-shadow: none; /* إزالة الظل */
+  box-shadow: none;
 }
 
 /* الأقسام */
@@ -216,8 +248,9 @@ footer {
   margin-top: 40px;
   font-size: 14px;
 }
+
 /* عندما يكون الزر نشط */
 #menu-toggle.active {
-  transform: rotate(180deg); /* على سبيل المثال: تغيير اتجاه السهم */
+  transform: rotate(180deg);
   transition: transform 0.3s ease;
 }
